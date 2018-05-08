@@ -1,0 +1,22 @@
+<div id="home">
+
+  <h1>Blended Comic Strip</h1>
+  <div id="home-content">
+    <div class="strip-img">
+      <% strip = @strips.sample %>
+      <% start_url = strip.start_img %>
+      <div class="strip-start" style='background-image: url(<%= asset_path "#{start_url}" %>)'></div>
+    </div>
+    <div class="strip-img">
+      <% strip = @strips.sample %>
+      <% middle_url = strip.middle_img %>
+      <div class="strip-middle" style='background-image: url(<%= asset_path "#{middle_url}" %>)'></div>
+    </div>
+    <div class="strip-img">
+      <% strip = @strips.sample %>
+      <% end_url = strip.end_img %>
+      <div class="strip-end" style='background-image: url(<%= asset_path "#{end_url}" %>)'></div>
+    </div>
+  </div>
+
+</div>
