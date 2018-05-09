@@ -23,34 +23,36 @@
   background-color: white;
   border: 2px solid $gray;
   border-radius: 2px;
-  max-width: 940px;
-  margin: 20px auto;
+  max-width: 980px;
+  margin: 50px auto;
 
   .strip-img {
     width: 300px;
     display: flex;
     align-items: center;
-    margin: 20px 5px;
+    margin: 20px 10px 40px 10px;
+    border: 2px solid $gray;
+    border-radius: 2px;
   }
   .strip-start {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 280px;
+    height: 300px;
     width: 300px;
   }
   .strip-middle {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 280px;
+    height: 300px;
     width: 300px;
   }
   .strip-end {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 280px;
+    height: 300px;
     width: 300px;
   }
 }

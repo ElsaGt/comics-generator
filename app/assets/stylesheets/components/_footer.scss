@@ -1,0 +1,24 @@
+.footer {
+  background-color: white;
+  text-align: right;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 30px;
+  margin-top: 20px;
+  padding-right: 15px;
+  font-weight: 300;
+  font-size: 10px;
+  a {
+    color: $gray;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
