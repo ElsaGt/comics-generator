@@ -1,0 +1,38 @@
+$.ajaxPrefilter(function( options, original_Options, jqXHR ) {
+    options.async = true;
+});
+
+$(document).ready(function() {
+  $(".strip-start").on("click", function() {
+    $(".strip-start").load("strips .strip-start");
+  });
+});
+
+$(document).ready(function() {
+  $(".strip-middle").on("click", function() {
+    $(".strip-middle").load("strips .strip-middle");
+  });
+});
+
+$(document).ready(function() {
+  $(".strip-end").on("click", function() {
+    $(".strip-end").load("strips .strip-end");
+  });
+});
+
+
+$(".strip-start").mouseover(function(){
+  $(".strip-start .strip-description").fadeIn(1000);
+});
+
+$(".strip-middle").mouseover(function(){
+  $(".strip-middle .strip-description").fadeIn(1000);
+});
+
+$(".strip-end").mouseover(function(){
+  $(".strip-end .strip-description").fadeIn(1000);
+});
+
+$(".strip-img").mouseleave(function(){
+  $(".strip-description").fadeOut(1000);
+});

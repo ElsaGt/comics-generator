@@ -1,6 +1,6 @@
 #home {
   background-color: $light-gray;
-  color: gray;
+  color: $gray;
   height: 100vh;
   display: block;
   align-items: center;
@@ -31,8 +31,12 @@
     display: flex;
     align-items: center;
     margin: 20px 10px 40px 10px;
-    border: 2px solid $gray;
+    border: 1px solid $gray;
     border-radius: 2px;
+    cursor: pointer;
+    &:hover {
+      margin-top: 15px;
+    }
   }
   .strip-start {
     background-size: cover;
@@ -40,6 +44,14 @@
     background-position: center center;
     height: 300px;
     width: 300px;
+    position: relative;
+    .strip-description {
+    position: absolute;
+    display: none;
+    bottom: -35px;
+    right: 0px;
+    font-size: 12px;
+    }
   }
   .strip-middle {
     background-size: cover;
@@ -47,6 +59,14 @@
     background-position: center center;
     height: 300px;
     width: 300px;
+    position: relative;
+    .strip-description {
+    position: absolute;
+    display: none;
+    bottom: -35px;
+    right: 0px;
+    font-size: 12px;
+    }
   }
   .strip-end {
     background-size: cover;
@@ -54,5 +74,13 @@
     background-position: center center;
     height: 300px;
     width: 300px;
+    position: relative;
+    .strip-description {
+    position: absolute;
+    display: none;
+    bottom: -35px;
+    right: 0px;
+    font-size: 12px;
+    }
   }
 }
