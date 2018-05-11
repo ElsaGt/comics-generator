@@ -1,0 +1,21 @@
+<div class="container">
+
+  <div class="header">
+    <h1 class="text-center">Add a strip</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= simple_form_for [@strip] do |f| %>
+        <%= f.input :title %>
+        <%= f.input :author %>
+        <%= f.input :date %>
+        <%= f.input :start_img %>
+        <%= f.input :middle_img %>
+        <%= f.input :end_img %>
+        <%= f.submit "Add the strip", class: 'btn btn-info' %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

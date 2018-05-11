@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180507140938) do
     t.string "end_img"
     t.string "title"
     t.string "author"
-    t.date "date"
+    t.integer "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

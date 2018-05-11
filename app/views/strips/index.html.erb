@@ -5,7 +5,7 @@
     <div class="strip-img">
       <% strip = @strips.sample %>
       <% start_url = strip.start_img %>
-      <div class="strip-start" style='background-image: url(<%= asset_path "#{start_url}" %>)'>
+      <div class="strip-start" style='background-image: url(<%= cl_image_path "#{start_url}" %>)'>
         <div class="strip-description">
           <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.date %></p>
         </div>
@@ -14,7 +14,7 @@
     <div class="strip-img">
       <% strip = @strips.sample %>
       <% middle_url = strip.middle_img %>
-      <div class="strip-middle" style='background-image: url(<%= asset_path "#{middle_url}" %>)'>
+      <div class="strip-middle" style='background-image: url(<%= cl_image_path "#{middle_url}" %>)'>
         <div class="strip-description">
           <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.date %></p>
         </div>
@@ -23,7 +23,7 @@
     <div class="strip-img">
       <% strip = @strips.sample %>
       <% end_url = strip.end_img %>
-      <div class="strip-end" style='background-image: url(<%= asset_path "#{end_url}" %>)'>
+      <div class="strip-end" style='background-image: url(<%= cl_image_path "#{end_url}" %>)'>
         <div class="strip-description">
           <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.date %></p>
         </div>

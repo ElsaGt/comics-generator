@@ -46,11 +46,12 @@
     width: 300px;
     position: relative;
     .strip-description {
-    position: absolute;
-    display: none;
-    bottom: -35px;
-    right: 0px;
-    font-size: 12px;
+      position: absolute;
+      display: none;
+      bottom: -35px;
+      right: 0px;
+      font-size: 12px;
+      color: gray;
     }
   }
   .strip-middle {
@@ -61,11 +62,12 @@
     width: 300px;
     position: relative;
     .strip-description {
-    position: absolute;
-    display: none;
-    bottom: -35px;
-    right: 0px;
-    font-size: 12px;
+      position: absolute;
+      display: none;
+      bottom: -35px;
+      right: 0px;
+      font-size: 12px;
+      color: gray;
     }
   }
   .strip-end {
@@ -76,11 +78,12 @@
     width: 300px;
     position: relative;
     .strip-description {
-    position: absolute;
-    display: none;
-    bottom: -35px;
-    right: 0px;
-    font-size: 12px;
+      position: absolute;
+      display: none;
+      bottom: -35px;
+      right: 0px;
+      font-size: 12px;
+      color: gray;
     }
   }
 }

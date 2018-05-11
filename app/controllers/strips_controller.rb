@@ -4,6 +4,15 @@ class StripsController < ApplicationController
     @strips = Strip.all
   end
 
+  def new
+    @strip = Strip.new
+  end
+
+  def create
+    @strip.create(strip_params)
+    redirect_to strips_path
+  end
+
 
   private
 
