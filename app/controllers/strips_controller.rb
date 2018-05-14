@@ -9,7 +9,7 @@ class StripsController < ApplicationController
   end
 
   def create
-    @strip.create(strip_params)
+    @strip = Strip.create(strip_params)
     redirect_to strips_path
   end
 
@@ -17,7 +17,7 @@ class StripsController < ApplicationController
   private
 
   def strip_params
-    params.require(:strip).permit(:start_img, :middle_img, :end_img, :title, :author, :date)
+    params.require(:strip).permit(:start_img, :middle_img, :end_img, :title, :author, :date, :year)
   end
 
 end

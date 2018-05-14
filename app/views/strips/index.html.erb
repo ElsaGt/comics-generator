@@ -17,10 +17,10 @@
           <%= simple_form_for (strip) do |f| %>
             <%= f.input :title, placeholder: "Strip title", label: false %>
             <%= f.input :author, placeholder: "Strip author", label: false %>
-            <%= f.input :date, label: "Strip creation date" %>
-            <%= f.input :start_img, label: "Strip first panel" %>
-            <%= f.input :middle_img, label: "Strip second panel" %>
-            <%= f.input :end_img, label: "Strip last panel" %>
+            <%= f.input :year, placeholder: "Strip creation year", label: false, class: "year-input" %>
+            <%= f.input :start_img, label: "Strip first panel", type: "file" %>
+            <%= f.input :middle_img, label: "Strip second panel", type: "file" %>
+            <%= f.input :end_img, label: "Strip last panel", type: "file" %>
             <%= f.submit "Add the strip", class: 'btn btn-info', style: "width: 100%" %>
           <% end %>
         </div>
@@ -34,7 +34,7 @@
       <% start_url = strip.start_img %>
       <div class="strip-start" style='background-image: url(<%= cl_image_path "#{start_url}" %>)'>
         <div class="strip-description">
-          <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.date %></p>
+          <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.year %></p>
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@
       <% middle_url = strip.middle_img %>
       <div class="strip-middle" style='background-image: url(<%= cl_image_path "#{middle_url}" %>)'>
         <div class="strip-description">
-          <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.date %></p>
+          <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.year %></p>
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@
       <% end_url = strip.end_img %>
       <div class="strip-end" style='background-image: url(<%= cl_image_path "#{end_url}" %>)'>
         <div class="strip-description">
-          <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.date %></p>
+          <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.year %></p>
         </div>
       </div>
     </div>
