@@ -1,27 +1,29 @@
 <div id="home">
 
+<div class="new-container">
   <h1 id="home-title">The Comic Strip Generator</h1>
-  <p>blablabla</p>
-<!--   <%#= link_to "Add a strip", new_strip_path, class: "btn btn-info" %> -->
-  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add a strip</button>
+  <div id="home-presentation">
+    <p>This is the beginning of a comic strip generator, click on each panel of the strip to replace it. The first strips are extracts from some american comics in the public domain. You can add a strip of your own or in the public domain to increase the generator's possibilities.</p>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add a Strip</button>
+  </div>
 
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h1 class="modal-title text-center" id="myModalLabel">Add a strip</h1>
+          <h1 class="modal-title text-center" id="myModalLabel">Add a Strip</h1>
         </div>
         <div class="modal-body">
           <% strip = Strip.new %>
           <%= simple_form_for (strip) do |f| %>
-            <%= f.input :title, placeholder: "Strip title", label: false %>
-            <%= f.input :author, placeholder: "Strip author", label: false %>
-            <%= f.input :year, placeholder: "Strip creation year", label: false, class: "year-input" %>
-            <%= f.input :start_img, label: "Strip first panel", type: "file" %>
-            <%= f.input :middle_img, label: "Strip second panel", type: "file" %>
-            <%= f.input :end_img, label: "Strip last panel", type: "file" %>
-            <%= f.submit "Add the strip", class: 'btn btn-info', style: "width: 100%" %>
+            <%= f.input :title, placeholder: "Strip Title", label: false %>
+            <%= f.input :author, placeholder: "Strip Author", label: false %>
+            <%= f.input :year, placeholder: "Strip Creation Year", label: false, class: "year-input" %>
+            <%= f.input :start_img, label: "Strip First Panel", type:"file", style: "text-align: left" %>
+            <%= f.input :middle_img, label: "Strip Second Panel", type: "file" %>
+            <%= f.input :end_img, label: "Strip Last Panel", type: "file" %>
+            <%= f.submit "Add the Strip", class: 'btn btn-info', style: "width: 100%" %>
           <% end %>
         </div>
       </div>
@@ -58,4 +60,5 @@
     </div>
   </div>
 
+</div>
 </div>
