@@ -24,9 +24,9 @@
             <%= f.input :title, placeholder: "Strip Title", label: false %>
             <%= f.input :author, placeholder: "Strip Author", label: false %>
             <%= f.input :year, placeholder: "Strip Creation Year", label: false, class: "year-input" %>
-            <%= f.input :start_img, label: "Strip First Panel", type:"file", style: "text-align: left" %>
-            <%= f.input :middle_img, label: "Strip Second Panel", type: "file" %>
-            <%= f.input :end_img, label: "Strip Last Panel", type: "file" %>
+            <%= f.input :start_img, label: "Strip First Panel (square preferably)", type:"file", style: "text-align: left" %>
+            <%= f.input :middle_img, label: "Strip Second Panel (square preferably)", type: "file" %>
+            <%= f.input :end_img, label: "Strip Last Panel (square preferably)", type: "file" %>
             <%= f.submit "Add the Strip", class: 'btn btn-info', style: "width: 100%" %>
           <% end %>
         </div>

@@ -68,7 +68,7 @@ input[type="number"] {
     width: 300px;
     display: flex;
     align-items: center;
-    margin: 20px 10px 40px 10px;
+    margin: 20px 10px 50px 10px;
     border: 1px solid $gray;
     border-radius: 2px;
     cursor: pointer;
@@ -86,7 +86,7 @@ input[type="number"] {
     .strip-description {
       position: absolute;
       display: none;
-      bottom: -35px;
+      bottom: -45px;
       right: 0px;
       font-size: 12px;
       color: gray;
@@ -102,7 +102,7 @@ input[type="number"] {
     .strip-description {
       position: absolute;
       display: none;
-      bottom: -35px;
+      bottom: -45px;
       right: 0px;
       font-size: 12px;
       color: gray;
@@ -118,7 +118,7 @@ input[type="number"] {
     .strip-description {
       position: absolute;
       display: none;
-      bottom: -35px;
+      bottom: -45px;
       right: 0px;
       font-size: 12px;
       color: gray;
