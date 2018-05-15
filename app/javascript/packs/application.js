@@ -6,5 +6,6 @@
 import "bootstrap";
 
 import "../components/cards.js.erb";
+import "../components/popup.js.erb";
 
 

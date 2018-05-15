@@ -40,7 +40,7 @@
       <% start_url = strip.start_img %>
       <div class="strip-start" style='background-image: url(<%= cl_image_path "#{start_url}" %>)'>
         <div class="strip-description">
-          <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.year %></p>
+          <p><strong><%= strip.author.present? ? strip.author : 'Unknown' %></strong>, <em><%= strip.title.present? ? strip.title : 'Untitled' %></em>, <%= strip.year.present? ? strip.year : 'Undated' %></p>
         </div>
       </div>
     </div>
@@ -49,7 +49,7 @@
       <% middle_url = strip.middle_img %>
       <div class="strip-middle" style='background-image: url(<%= cl_image_path "#{middle_url}" %>)'>
         <div class="strip-description">
-          <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.year %></p>
+          <p><strong><%= strip.author.present? ? strip.author : 'Unknown' %></strong>, <em><%= strip.title.present? ? strip.title : 'Untitled' %></em>, <%= strip.year.present? ? strip.year : 'Undated' %></p>
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
       <% end_url = strip.end_img %>
       <div class="strip-end" style='background-image: url(<%= cl_image_path "#{end_url}" %>)'>
         <div class="strip-description">
-          <p><%= strip.author %>, <em><%= strip.title %></em>, <%= strip.year %></p>
+          <p><strong><%= strip.author.present? ? strip.author : 'Unknown' %></strong>, <em><%= strip.title.present? ? strip.title : 'Untitled' %></em>, <%= strip.year.present? ? strip.year : 'Undated' %></p>
         </div>
       </div>
     </div>
