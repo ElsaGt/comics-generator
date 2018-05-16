@@ -24,9 +24,9 @@
             <%= f.input :title, placeholder: "Strip Title", label: false %>
             <%= f.input :author, placeholder: "Strip Author", label: false %>
             <%= f.input :year, placeholder: "Strip Creation Year", label: false, class: "year-input" %>
-            <%= f.input :start_img, label: "Strip First Panel (square preferably)", type:"file", style: "text-align: left" %>
-            <%= f.input :middle_img, label: "Strip Second Panel (square preferably)", type: "file" %>
-            <%= f.input :end_img, label: "Strip Last Panel (square preferably)", type: "file" %>
+            <%= f.input :start_img, label: "Strip First Panel (square or it will be cut)", type:"file", style: "text-align: left" %>
+            <%= f.input :middle_img, label: "Strip Second Panel (square or it will be cut)", type: "file" %>
+            <%= f.input :end_img, label: "Strip Last Panel (square or it will be cut)", type: "file" %>
             <%= f.submit "Add the Strip", class: 'btn btn-info', style: "width: 100%" %>
           <% end %>
         </div>
@@ -47,7 +47,7 @@
     <div class="strip-img">
       <% strip = @strips.sample %>
       <% middle_url = strip.middle_img %>
-      <div class="strip-middle" style='background-image: url(<%= cl_image_path "#{middle_url}" %>)'>
+      <div class="strip-middle" style='background-image: url(<%= cl_image_path  "#{middle_url}" %>)'>
         <div class="strip-description">
           <p><strong><%= strip.author.present? ? strip.author : 'Unknown' %></strong>, <em><%= strip.title.present? ? strip.title : 'Untitled' %></em>, <%= strip.year.present? ? strip.year : 'Undated' %></p>
         </div>
