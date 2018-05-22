@@ -12,9 +12,11 @@ class StripsController < ApplicationController
     @strip = Strip.new(strip_params)
 
     if @strip.save
-      redirect_to '/', notice: 'The strip has been successfully added to the database. Thank you!'
+      flash[:info] = 'The strip has been successfully added to the database. Thank you!'
+      redirect_to '/'
     else
-      redirect_to '/', notice: 'Please try again and be sure to upload 3 panels.'
+      # flash[:success] = 'Please try again and be sure to upload 3 panels.'
+      redirect_to '/'
     end
   end
 
@@ -22,7 +24,7 @@ class StripsController < ApplicationController
   private
 
   def strip_params
-    params.require(:strip).permit(:start_img, :middle_img, :end_img, :title, :author, :date, :year, :notice)
+    params.require(:strip).permit(:start_img, :middle_img, :end_img, :title, :author, :date, :year, :alert)
   end
 
 end
