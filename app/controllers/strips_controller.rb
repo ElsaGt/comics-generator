@@ -14,8 +14,8 @@ class StripsController < ApplicationController
     if @strip.save
       flash[:info] = 'The strip has been successfully added to the database. Thank you!'
       redirect_to '/'
-    else
-      # flash[:success] = 'Please try again and be sure to upload 3 panels.'
+    elsif !@strip.save
+      flash[:info] = 'Please try again and be sure to upload 3 panels.'
       redirect_to '/'
     end
   end
